@@ -12,7 +12,7 @@
         <h1>Create a New Concert</h1>
     </div>
     
-    <div class="flex justify-center items-center">
+    <div class=" flex-col justify-center items-center">
     <form method="POST" action="/concerts">
         @csrf
         <label for="name">Name:</label>
@@ -27,5 +27,14 @@
         <button type="submit">Create Concert</button>
     </form>
     </div>
+    
+    <div class="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
+        <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+            Add Concert
+        </h4>
+
+    </div>
+
+
 </body>
 </html>
