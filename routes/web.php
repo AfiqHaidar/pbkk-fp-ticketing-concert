@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConcertController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/create', function () {
+    return view('create');
+})->name('create');
+
+
+
+Route::get('/concerts', [ConcertController::class, 'index']);
+Route::post('/concerts', [ConcertController::class, 'store']);
