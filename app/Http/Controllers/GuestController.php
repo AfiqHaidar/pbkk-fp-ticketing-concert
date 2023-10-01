@@ -24,7 +24,7 @@ class GuestController extends Controller
             'name' => 'required|string|max:255',
             'concert' => 'required|string|max:255',
             'date' => 'required|date',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:10048'
         ]);
 
         $imagePath = $request->file('image')->store('guests', 'public');
