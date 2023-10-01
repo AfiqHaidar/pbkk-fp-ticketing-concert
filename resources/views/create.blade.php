@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Concert</title>
+    @vite('resources/css/app.css')
 </head>
 <body>
-    <h1>Create a New Concert</h1>
-
+    <div class="underline">
+        <h1>Create a New Concert</h1>
+    </div>
+    
+    <div class="flex justify-center items-center">
     <form method="POST" action="/concerts">
         @csrf
         <label for="name">Name:</label>
@@ -22,5 +26,6 @@
 
         <button type="submit">Create Concert</button>
     </form>
+    </div>
 </body>
 </html>
